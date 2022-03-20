@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <ul class="navigation__left  " id="hidden">
+                <li class=" navigation__item">
+                    <a href="#">shop</a>
+                </li>
+                <li class=" navigation__item">
+                    <a href="#">about us</a>
+                </li>
+                <li class=" navigation__item">
+                    <a href="#">our fabrics</a>
+                </li>
+                <li class=" navigation__item navigation--special">
+                    <a href="#">plastic caluculator</a>
+                </li>
+                <div class="navigation__image">
+
+                    <!-- <a href="https://www.rebornmerchandise.com" title="Reborn Merchandise"> -->
+                    <img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/horizontal_410x.png?v=1598564764"
+                        class="primary_logo lazyloaded" alt="Reborn Merchandise"></a>
+                </div>
+            </ul>
+            <ul class="navigation__right">
+                <li class="navigation__item">
+                    <a href="#">gbp</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#">account</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#">cart</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <figure class="banner">
+
+            <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_calculator_6595465d-7d89-415a-8b24-f191dc453c2a_1600x.png?v=1603261972"
+                alt="">
+            <div class="banner__text">
+                <h2>Plastic calculator</h2>
+                <h4>Have you ever thought of the scale of your impact on our planet?</h4>
+                <h4>Try our plastic calculator and find out how much plastic you use and what you can do with that.</h4>
+            </div>
+        </figure>
+    </main>
+    <div class="container">
+        <div class="container__btn__row">
+            <button class="container__btn container--btn--black">plastic into garments</button>
+            <button class="container__btn container--btn--white">garments into plastic</button>
+        </div>
+        <div class="container__type">
+            <div class="seletor">
+                <h4>Plastic type
+                </h4>
+
+                <label class="switch">
+                    <span>choose all</span>
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="container__row__card">
+            <div class="container__card">
+                <div class="container__items">
+                    <h4>1/2 pint cup</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let bars = document.querySelector("#bars");
+        let menu = document.querySelector("#hidden");
+        bars.addEventListener("click", () => {
+            menu.classList.toggle("nav__left");
+        });
+    </script>
+</body>
+
+</html>
