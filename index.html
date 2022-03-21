@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -56,7 +57,7 @@
             <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_calculator_6595465d-7d89-415a-8b24-f191dc453c2a_1600x.png?v=1603261972"
                 alt="">
             <div class="banner__text">
-                <h2>Plastic calculator</h2>
+                <h1>Plastic calculator</h1>
                 <h4>Have you ever thought of the scale of your impact on our planet?</h4>
                 <h4>Try our plastic calculator and find out how much plastic you use and what you can do with that.</h4>
             </div>
@@ -71,19 +72,83 @@
             <div class="seletor">
                 <h4>Plastic type
                 </h4>
-
                 <label class="switch">
                     <span>choose all</span>
                     <input type="checkbox" checked>
                     <span class="slider round"></span>
                 </label>
             </div>
+            <p>Select the plastic types you use in your company which can be used in clothes manufacturing and enter
+                amount of units for each type.</p>
         </div>
         <div class="container__row__card">
             <div class="container__card">
-                <div class="container__items">
+                <img class="img"
+                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                    alt="">
+                <div class="container__item">
+                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                        alt="">
                     <h4>1/2 pint cup</h4>
                 </div>
+                <form action="#">
+                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
+                    </button>
+                    <input type="number" id="number" value="0" class="value__button" />
+                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
+                    </button>
+                </form>
+            </div>
+            <div class="container__card">
+                <img class="img"
+                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                    alt="">
+                <div class="container__item">
+                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                        alt="">
+                    <h4>1/2 pint cup</h4>
+                </div>
+                <form action="#">
+                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
+                    </button>
+                    <input type="number" id="number" value="0" class="value__button" />
+                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
+                    </button>
+                </form>
+            </div>
+            <div class="container__card">
+                <img class="img"
+                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                    alt="">
+                <div class="container__item">
+                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                        alt="">
+                    <h4>1/2 pint cup</h4>
+                </div>
+                <form action="#">
+                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
+                    </button>
+                    <input type="number" id="number" value="0" class="value__button" />
+                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
+                    </button>
+                </form>
+            </div>
+            <div class="container__card">
+                <img class="img"
+                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                    alt="">
+                <div class="container__item">
+                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                        alt="">
+                    <h4>1/2 pint cup</h4>
+                </div>
+                <form action="#">
+                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
+                    </button>
+                    <input type="number" id="number" value="0" class="value__button" />
+                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -93,6 +158,22 @@
         bars.addEventListener("click", () => {
             menu.classList.toggle("nav__left");
         });
+        function increaseValue(event) {
+            event.preventDefault()
+            var value = parseInt(document.getElementById('number').value);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+        }
+
+        function decreaseValue(event) {
+            event.preventDefault()
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number').value = value;
+        }
     </script>
 </body>
 

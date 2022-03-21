@@ -7,6 +7,9 @@
 html {
   font-size: 100%;
 }
+body {
+  font-family: Oswald, sans-serif;
+}
 :root {
   --text-color: #1a1a1a;
   --text-font-size: 1rem;
@@ -19,22 +22,42 @@ html {
 }
 /* here goes navigation */
 .navigation {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 12px 24px;
 }
 .navigation__left,
 .navigation__right {
   display: flex;
-  list-style: none;
-  text-decoration: none;
-  color: var(--text-color);
   justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  color: var(--text-color);
   text-transform: uppercase;
   font-size: var(--text-font-size);
   font-family: var(--font-family);
+  background-color: white;
+  font-weight: 500;
+}
+.navigation__right {
+  justify-content: flex-end;
+}
+.navigation__right li {
+  margin-left: 50px;
 }
 .navigation__item a {
   text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+  transition: all 0.4s;
+}
+.navigation__item a:hover::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-color);
 }
 .banner {
   position: relative;
@@ -47,7 +70,25 @@ html {
   position: absolute;
   top: 50%;
   color: white;
-  width: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  margin-left: 4.5rem;
+}
+.banner__text h1 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  letter-spacing: 0px;
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+.banner__text h4 {
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 0px;
+  font-family: "Open Sans", sans-serif;
 }
 /* navigation__image  */
 .navigation__image {
@@ -68,9 +109,44 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.container__btn {
+  border-bottom: 1px solid #1a1a1a;
+  background: #1a1a1a;
+  color: #fff;
+  height: 100%;
+  padding: 11px 0;
+  border: 1px solid var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.container--btn--white {
+  background-color: #fff;
+  color: var(--text-color);
+}
+.container__type {
+  margin: 24px 0;
+  text-align: justify;
+}
 .seletor {
   display: flex;
   justify-content: space-between;
+}
+.seletor h4 {
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: none;
+  line-height: 1.5;
+  color: #1a1a1a;
+  display: block;
+  letter-spacing: 0px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 24px 0;
 }
 /* The switch - the box around the slider */
 .switch {
@@ -138,4 +214,80 @@ input:checked + .slider:before {
 .container__row__card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  flex-direction: column;
+  grid-column-gap: 20px;
+}
+.container__card {
+  position: relative;
+}
+.container__item {
+  border: 1px solid #1a1a1a;
+  padding: 44px 0;
+  text-align: center;
+}
+.container__card .img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* form...................... */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid #e8e8e8;
+  height: 48px;
+  min-height: 48px;
+  margin-top: 10px;
+}
+.container__card button {
+  border: none;
+  background: transparent;
+}
+.value__button {
+  flex: 1 1 0;
+  width: 0;
+  font-size: 19px;
+  text-align: center;
+}
+.value__button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+}
+
+form #increase {
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  border: none;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media (max-width: 880px) {
+  .container {
+    max-width: 100%;
+    margin: 30px;
+  }
+  .container__row__card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
+    grid-column-gap: 20px; */
+  }
+  .container__card {
+  }
 }
