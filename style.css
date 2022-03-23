@@ -16,6 +16,13 @@ body {
   --font-family: Oswald, sans-serif;
   --font-weight: bolder;
 }
+header {
+  position: sticky;
+  top: 0px;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+}
 /* here goes bars icon */
 #bars {
   display: none;
@@ -23,7 +30,7 @@ body {
 /* here goes navigation */
 .navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 42% auto 42%;
   padding: 12px 24px;
 }
 .navigation__left,
@@ -50,6 +57,12 @@ body {
   color: var(--text-color);
   position: relative;
   transition: all 0.4s;
+}
+.navigation__item a img {
+  height: 7px;
+  background-size: 14px 14px;
+  width: 14px;
+  transform: rotate(180deg);
 }
 .navigation__item a:hover::after {
   position: absolute;
@@ -215,10 +228,12 @@ input:checked + .slider:before {
 }
 .container__row__card {
   display: grid;
+  grid-template-rows: 2 repeat(2, 1fr);
+}
+.container__row__card .container__content {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  flex-direction: column;
-  grid-column-gap: 20px;
+  grid-gap: 15px;
 }
 .container__card {
   position: relative;
@@ -278,11 +293,16 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+footer {
+  background-color: #1a1a1a;
+}
 .footer__container {
   display: grid;
   grid-template-rows: 150px 250px 150px;
   background-color: #1a1a1a;
   color: white;
+  max-width: 74.25rem;
+  margin: 0 auto;
 }
 .footer__logo img {
   background-color: white;
@@ -291,6 +311,29 @@ input[type="number"]::-webkit-outer-spin-button {
 .footer__services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+.footer__nav {
+  margin-bottom: 1em;
+  line-height: 1.1;
+  list-style: none;
+  color: #e8e8e8;
+  pointer-events: all;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-transform: capitalize;
+}
+.footer__container li,
+footer h4 {
+  margin-bottom: 1em;
+  line-height: 1.1;
+  list-style: none;
+  color: #e8e8e8;
+  pointer-events: all;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-transform: capitalize;
 }
 /* .social__links::after {
   position: absolute;
@@ -310,6 +353,9 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   list-style: none;
   text-decoration: none;
+}
+.btn--margin {
+  margin: 30px 0 78px 0;
 }
 @media (max-width: 480px) {
   .container {

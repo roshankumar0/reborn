@@ -12,7 +12,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -21,7 +20,10 @@
         <nav class="navigation">
             <ul class="navigation__left  " id="hidden">
                 <li class=" navigation__item">
-                    <a href="#">shop</a>
+                    <a href="#">shop
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/icon_arrow_down.svg?v=7955688836827328726"
+                            alt="">
+                    </a>
                 </li>
                 <li class=" navigation__item">
                     <a href="#">about us</a>
@@ -32,22 +34,25 @@
                 <li class=" navigation__item navigation--special">
                     <a href="#">plastic caluculator</a>
                 </li>
-                <div class="navigation__image">
-
-                    <a href="https://www.rebornmerchandise.com" title="Reborn Merchandise">
-                        <img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/horizontal_410x.png?v=1598564764"
-                            class="primary_logo lazyloaded" alt="Reborn Merchandise"></a>
-                </div>
             </ul>
+            <div class="navigation__image">
+
+                <a href="https://www.rebornmerchandise.com" title="Reborn Merchandise">
+                    <img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/horizontal_410x.png?v=1598564764"
+                        class="primary_logo lazyloaded" alt="Reborn Merchandise"></a>
+            </div>
             <ul class="navigation__right">
                 <li class="navigation__item">
-                    <a href="#">gbp</a>
+                    <a href="#">gbp <span>(£)</span>
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/icon_arrow_down.svg?v=7955688836827328726"
+                            alt="">
+                    </a>
                 </li>
                 <li class="navigation__item">
                     <a href="#">account</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#">cart</a>
+                    <a href="#">cart <span>(0)</span></a>
                 </li>
             </ul>
         </nav>
@@ -83,142 +88,255 @@
                 amount of units for each type.</p>
         </div>
         <div class="container__row__card">
-            <div class="container__card">
-                <img class="img"
-                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
-                    alt="">
-                <div class="container__item">
-                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+            <div class="container__content">
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
                         alt="">
-                    <h4>1/2 pint cup</h4>
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                            alt="">
+                        <h4>1/2 pint cup</h4>
+                    </div>
+                    <form action="#">
+                        <button class="value__button " id="decrease" onclick="decreaseValue(event)"
+                            value="Decrease Value">-
+                        </button>
+                        <input type="number" id="number" value="0" class="value__button" />
+                        <button class="value__button" id="increase" onclick="increaseValue(event)"
+                            value="Increase Value">+
+                        </button>
+                    </form>
                 </div>
-                <form action="#">
-                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
-                    </button>
-                    <input type="number" id="number" value="0" class="value__button" />
-                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
-                    </button>
-                </form>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                            alt="">
+                        <h4>Pint Cup
+                        </h4>
+                    </div>
+                    <form action="#">
+                        <button class="value__button " id="decrease" onclick="decreaseValue(event)"
+                            value="Decrease Value">-
+                        </button>
+                        <input type="number" id="number" value="0" class="value__button" />
+                        <button class="value__button" id="increase" onclick="increaseValue(event)"
+                            value="Increase Value">+
+                        </button>
+                    </form>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_bottle.svg?v=3039978163040503868"
+                            alt="">
+                        <h4>500ml Bottle
+                        </h4>
+                    </div>
+                    <form action="#">
+                        <button class="value__button " id="decrease" onclick="decreaseValue(event)"
+                            value="Decrease Value">-
+                        </button>
+                        <input type="number" id="number" value="0" class="value__button" />
+                        <button class="value__button" id="increase" onclick="increaseValue(event)"
+                            value="Increase Value">+
+                        </button>
+                    </form>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_bottle.svg?v=3039978163040503868"
+                            alt="">
+                        <h4>1l Bottle
+                        </h4>
+                    </div>
+                    <form action="#">
+                        <button class="value__button " id="decrease" onclick="decreaseValue(event)"
+                            value="Decrease Value">-
+                        </button>
+                        <input type="number" id="number" value="0" class="value__button" />
+                        <button class="value__button" id="increase" onclick="increaseValue(event)"
+                            value="Increase Value">+
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="container__card">
-                <img class="img"
-                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
-                    alt="">
-                <div class="container__item">
-                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
-                        alt="">
-                    <h4>1/2 pint cup</h4>
+            <div class="container__type">
+                <div class="seletor">
+                    <h4>Garments
+                    </h4>
+                    <label class="switch">
+                        <span>choose all</span>
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
                 </div>
-                <form action="#">
-                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
-                    </button>
-                    <input type="number" id="number" value="0" class="value__button" />
-                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
-                    </button>
-                </form>
+                <p>Select the garments you want to produce from recycled plastic.
+                </p>
             </div>
-            <div class="container__card">
-                <img class="img"
-                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
-                    alt="">
-                <div class="container__item">
-                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+            <div class="container__content">
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
                         alt="">
-                    <h4>1/2 pint cup</h4>
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/t-shirt.svg?v=12166169371759429861"
+                            alt="">
+                        <h4>Tee</h4>
+                    </div>
                 </div>
-                <form action="#">
-                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
-                    </button>
-                    <input type="number" id="number" value="0" class="value__button" />
-                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
-                    </button>
-                </form>
-            </div>
-            <div class="container__card">
-                <img class="img"
-                    src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
-                    alt="">
-                <div class="container__item">
-                    <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/plastic_cup.svg?v=6235338644198225192"
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
                         alt="">
-                    <h4>1/2 pint cup</h4>
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/polo.svg?v=11850596623776447475"
+                            alt="">
+                        <h4>Polo</h4>
+                    </div>
                 </div>
-                <form action="#">
-                    <button class="value__button " id="decrease" onclick="decreaseValue(event)" value="Decrease Value">-
-                    </button>
-                    <input type="number" id="number" value="0" class="value__button" />
-                    <button class="value__button" id="increase" onclick="increaseValue(event)" value="Increase Value">+
-                    </button>
-                </form>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/jersey.svg?v=13044692808124121156"
+                            alt="">
+                        <h4>Sport Jersey
+                        </h4>
+                    </div>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/hoodie.svg?v=10046587470706782599"
+                            alt="">
+                        <h4>Hoodie</h4>
+                    </div>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/soft_shell.svg?v=11013112607758670293"
+                            alt="">
+                        <h4>Soft Shell
+                        </h4>
+                    </div>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/gilet.svg?v=8550929148073499020"
+                            alt="">
+                        <h4>Gilet</h4>
+                    </div>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/jacket.svg?v=11332880915348338534"
+                            alt="">
+                        <h4>Jackets</h4>
+                    </div>
+                </div>
+                <div class="container__card">
+                    <img class="img"
+                        src="https://cdn.shopify.com/s/files/1/0455/3785/3607/t/16/assets/selected.svg?v=10793677288224067069"
+                        alt="">
+                    <div class="container__item">
+                        <img src="https://cdn.shopify.com/s/files/1/0455/3785/3607/files/parka.svg?v=10558933056542264746"
+                            alt="">
+                        <h4>Parka</h4>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="container__btn container--btn--black">CALCULATE</button>
+        <button class="container__btn container--btn--black btn--margin ">CALCULATE</button>
 
     </div>
-    <footer class="footer__container">
-        <div class="footer__social">
-            <div class="footer__logo">
-                <a href="https://www.rebornmerchandise.com" title="Reborn Merchandise">
-                    <img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/horizontal_410x.png?v=1598564764"
-                        class="primary_logo lazyloaded" alt="Reborn Merchandise"></a>
-            </div>
-            <div class="footer__social__links">
+    <footer>
+        <footer class="footer__container">
+            <div class="footer__social">
+                <div class="footer__logo">
+                    <a href="https://www.rebornmerchandise.com" title="Reborn Merchandise">
+                        <img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/horizontal_410x.png?v=1598564764"
+                            class="primary_logo lazyloaded" alt="Reborn Merchandise"></a>
+                </div>
+                <div class="footer__social__links">
 
-            </div>
-        </div>
-        <div class="footer__services">
-            <div class="footer__nav">
-                <h4>REBORN</h4>
-                <ul>
-                    <li>about us</li>
-                    <li>our fabrics</li>
-                    <li>blog </li>
-                    <li>plastic calculator</li>
-                </ul>
-            </div>
-            <div class="footer__contact">
-                <h4>CUSTOMER SERVICE</h4>
-                <ul>
-                    <li>FAQ</li>
-                    <li>Contact us</li>
-                    <li>Terms & Conditions </li>
-                    <li>Shipping & Returns</li>
-                    <li>Track my order</li>
-                </ul>
-            </div>
-            <div class="footer__newsletter">
-                <h4>NEWSLETTER
-                </h4>
-                <span>Sign up for our newsletter and be the first to know about special offers, discounts and exclusive
-                    releases!</span>
-                <div class="social__links">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
                 </div>
             </div>
-        </div>
-        <span>
-            <hr>
-        </span>
-        <div class="payment__method">
-            <h6>© Reborn Merchandise 2021. All Rights Reserved</h6>
-            <ul>
-                <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_copy.png?v=1597389378"
-                        alt=""></li>
-                <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa.png?v=1597389394"
-                        alt=""></li>
-                <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_mastercard.png?v=1597389436"
-                        alt=""></li>
-                <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_1.png?v=1597389457"
-                        alt=""></li>
-                <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_2.png?v=1597389471"
-                        alt=""></li>
-                <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_3.png?v=1597389497"
-                        alt=""></li>
-            </ul>
+            <div class="footer__services">
+                <div class="footer__nav">
+                    <h4>REBORN</h4>
+                    <ul>
+                        <li>about us</li>
+                        <li>our fabrics</li>
+                        <li>blog </li>
+                        <li>plastic calculator</li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Contact us</li>
+                        <li>Terms & Conditions </li>
+                        <li>Shipping & Returns</li>
+                        <li>Track my order</li>
+                    </ul>
+                </div>
+                <div class="footer__newsletter">
+                    <h4>NEWSLETTER
+                    </h4>
+                    <span>Sign up for our newsletter and be the first to know about special offers, discounts and
+                        exclusive
+                        releases!</span>
+                    <div class="social__links">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <span>
+                <hr>
+            </span>
+            <div class="payment__method">
+                <h6>© Reborn Merchandise 2021. All Rights Reserved</h6>
+                <ul>
+                    <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_copy.png?v=1597389378"
+                            alt=""></li>
+                    <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa.png?v=1597389394"
+                            alt=""></li>
+                    <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_mastercard.png?v=1597389436"
+                            alt=""></li>
+                    <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_1.png?v=1597389457"
+                            alt=""></li>
+                    <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_2.png?v=1597389471"
+                            alt=""></li>
+                    <li><img src="//cdn.shopify.com/s/files/1/0455/3785/3607/files/payment_method_visa_3.png?v=1597389497"
+                            alt=""></li>
+                </ul>
 
-        </div>
+            </div>
+        </footer>
     </footer>
     <script>
         let bars = document.querySelector("#bars");
@@ -242,6 +360,7 @@
             value--;
             document.getElementById('number').value = value;
         }
+
     </script>
 </body>
 
