@@ -147,6 +147,13 @@ header {
 .seletor {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.toggle span {
+  text-transform: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
 }
 .seletor h4 {
   font-family: Oswald, sans-serif;
@@ -167,8 +174,9 @@ header {
 .switch {
   position: relative;
   display: inline-block;
-  width: 90px;
-  height: 34px;
+  width: 60px;
+  height: 22px;
+  background-color: #e8e8e8;
 }
 
 /* Hide default HTML checkbox */
@@ -194,25 +202,32 @@ header {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  left: 4px;
-  bottom: 4px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 999;
+  transform: translateY(4%);
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  box-shadow: 3px 3px 10px #cacaca;
+ 
 }
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #151515;
 }
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196f3;
+ 
+ 
+  
 }
 
 input:checked + .slider:before {
-  transform: translateX(60px);
+  transform: translateX(100%);
 }
 /* Rounded sliders */
 .slider.round {
@@ -279,7 +294,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 footer {
   font-size: 14px;
-  padding: 0px 70px;
+  padding: 0px 90px;
   border-top: solid 1px #151515;
   background-color: #151515;
   background-position: center center;
@@ -394,7 +409,10 @@ footer li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 0;
+  margin-bottom: 0;
+
+  border-top: 1px solid #2d2d2d;
 }
 .payment ul {
   display: flex;
@@ -422,7 +440,7 @@ footer li {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
 }
 @media (max-width: 480px) {
   footer {
@@ -439,16 +457,13 @@ footer li {
     flex-direction: column;
     height: 69%;
     margin-bottom: 40px;
-    
   }
-  .footer__newsletter form input{
+  .footer__newsletter form input {
     width: 100%;
-   
   }
-  .footer__newsletter form button{
+  .footer__newsletter form button {
     width: 100%;
     margin-top: 10px;
-    
   }
 }
 
