@@ -449,7 +449,7 @@ footer li {
 @media (max-width: 480px) {
   .navigation {
     justify-content: center;
-    grid-template-columns: auto;
+    /* grid-template-columns: auto; */
   }
   .navigation__left,
   .navigation__right {
