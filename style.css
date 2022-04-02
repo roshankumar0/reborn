@@ -446,10 +446,42 @@ footer li {
   text-transform: capitalize;
   font-size: 12px;
 }
+.mobile__only {
+  display: none;
+}
 @media (max-width: 480px) {
   .navigation {
     justify-content: center;
-    /* grid-template-columns: auto; */
+    grid-template-columns: auto;
+    padding: 5px 24px;
+  }
+  .navigation__image {
+    margin-left: 0;
+    height: 1.875rem;
+    width: 100%;
+  }
+  .navigation__image img {
+  }
+  .desktop__only {
+    display: none;
+  }
+  .mobile__only {
+    display: block;
+  }
+  .banner__text {
+    margin-left: 0;
+    padding: 0 20px;
+    text-align: center;
+    top: 23%;
+  }
+  .banner__text h1 {
+    font-size: 2rem;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+  }
+  .banner__text h4 {
+    /* background-color: red; */
+    font-size: 0.875rem;
   }
   .navigation__left,
   .navigation__right {
@@ -466,8 +498,9 @@ footer li {
   .seletor h4 {
     font-size: 24px;
   }
-  .container{
+  .container {
     padding: 0 20px;
+    margin-top: 24px;
   }
   .container__card .img {
     right: 5px;
@@ -487,6 +520,14 @@ footer li {
     text-align: center;
     width: 100%;
   }
+  .container__btn {
+    font-size: 12px;
+    font-family: var(--font-family);
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+  }
   footer {
     text-align: center;
     width: 100%;
@@ -494,7 +535,40 @@ footer li {
   }
   .footer__logo {
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+  .social__links {
+    display: none;
+  }
+  .footer__nav {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    margin-top: 27px;
+  }
+  .social__links i:nth-child(2),
+  .social__links i:nth-child(3) {
+    margin-left: 13px;
+  }
+  .footer__logo img {
+    max-width: 94px !important;
+    width: 94px;
+    margin: 0 auto;
+    display: block;
+  }
+  footer h4 {
+    text-align: center;
+    padding: 1px 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 18px;
+    padding-bottom: 0px;
+  }
+  .btn--margin {
+    margin: 40px 0 0px 0;
   }
   .footer__links {
     grid-template-columns: repeat(1, 1fr);
