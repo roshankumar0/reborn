@@ -25,6 +25,9 @@ body {
   --font-family: Oswald, sans-serif;
   --font-weight: bolder;
 }
+.social__links.mobile{
+  display: none;
+}
 header {
   position: sticky;
   top: 0px;
@@ -492,7 +495,7 @@ footer li {
    justify-content: space-between;
    align-items: center;
    list-style: none;
-   padding: 4px 9px;
+   margin: 5px 16px;
  }
  .mobile__header__nav ul li:not(:nth-child(3n)){
    /* flex: 1; */
