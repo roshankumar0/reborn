@@ -25,9 +25,6 @@ body {
   --font-family: Oswald, sans-serif;
   --font-weight: bolder;
 }
-.social__links.mobile{
-  display: none;
-}
 header {
   position: sticky;
   top: 0px;
@@ -58,20 +55,6 @@ header {
 .navigation__right {
   justify-content: flex-end;
   column-gap: 50px;
-}
-.mobile__header__nav ul i{
-  font-size: 25px;
-}
-.mobile__header__nav .navigation__item{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: #1a1a1a;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-   font-weight: 700;
-  
 }
 .navigation__item a {
   text-decoration: none;
@@ -487,25 +470,48 @@ footer li {
     text-transform: uppercase;
   }
   .banner__text h4 {
-    /* background-color: red; */
-    font-size: 0.875rem;
+       font-size: 0.875rem;
   }
  .mobile__header__nav ul{
    display: flex;
    justify-content: space-between;
    align-items: center;
    list-style: none;
-   margin: 5px 16px;
+   padding: 4px 9px;
  }
- .mobile__header__nav ul li:not(:nth-child(3n)){
-   /* flex: 1; */
+ .mobile__header__nav ul li:nth-child(2){
+   display: flex;
+  justify-content: center;
+ 
+ 
+
  }
  .mobile__header__nav ul li{
    min-width: 100px;
+ 
  }
  .mobile__header__nav ul img{
   height: 30px;
+ 
  }
+ .mobile__header__nav ul i{
+  font-size: 20px;
+  color: #2d2d2d;
+  cursor: pointer;
+  
+}
+.mobile__header__nav .navigation__item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #1a1a1a;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+   font-weight: 700;
+  
+  
+}
   .banner {
     height: 60vh;
   }
